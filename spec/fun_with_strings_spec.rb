@@ -23,8 +23,7 @@ describe 'word count', :pending => true do
     expect('Doo bee doo bee doo'.count_words).to eq({'doo' => 3, 'bee' => 2})
   end
   it 'ignores punctuation' do
-    expect('A man, a plan, a canal -- Panama!'.count_words).to
-        eq({'man' => 1, 'plan' => 1, 'canal' => 1, 'a' => 3, 'panama' => 1})
+    expect('A man, a plan, a canal -- Panama!'.count_words).to eq({'man' => 1, 'plan' => 1, 'canal' => 1, 'a' => 3, 'panama' => 1})
   end
   it 'works on the empty string' do
     expect(''.count_words).to eq({})
