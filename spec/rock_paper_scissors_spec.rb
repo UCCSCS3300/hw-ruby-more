@@ -5,7 +5,7 @@ describe RockPaperScissors, :pending => true do
   before(:each) do
     @rock = ['Armando','R'] ; @paper = ['Dave','P'] ; @scissors = ['Sam','S']
   end
-  describe 'game' do
+  describe '[2 points] game' do
     it 'rock breaks scissors' do
       expect(RockPaperScissors.winner(@rock, @scissors)).to eq(@rock)
     end
@@ -22,7 +22,7 @@ describe RockPaperScissors, :pending => true do
   it "should raise NoSuchStrategyError if strategy isn't R, P, or S" do
     expect(lambda { RockPaperScissors.winner(@rock, ['Dave', 'w']) }).to raise_error(RockPaperScissors::NoSuchStrategyError, "Strategy must be one of R,P,S")
   end
-  describe 'tournament' do
+  describe '[3 points] tournament' do
     it 'base case' do
       expect(RockPaperScissors.tournament_winner([@rock,@paper])).to eq(@paper)
     end
