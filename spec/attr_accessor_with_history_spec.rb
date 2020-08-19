@@ -8,7 +8,7 @@ class TestClass2
   attr_accessor_with_history 'foo'
 end
 
-describe '(EC 10 points FINE IF FAILING)', :pending => true do
+describe '([10 points] Extra Credit)', :pending => true do
   shared_examples 'all cases' do
     it 'should define getter and setter' do
       @subject.foo = 'xyz'
