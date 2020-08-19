@@ -1,21 +1,21 @@
 require 'fun_with_strings'
 require 'byebug'
 
-describe 'palindrome detection', :pending => true do
+describe '[2 points] palindrome detection', :pending => true do
   it 'should work for simple strings' do
     expect('redivider').to  be_a_palindrome
     expect('abracadabra').not_to  be_a_palindrome
   end
-  it 'should be case-insensitive' do
+  it 'should be case-insensitive', :pending => true do
     expect('ReDivider').to be_a_palindrome
   end
-  it 'should ignore nonword characters' do
+  it 'should ignore nonword characters', :pending => true do
     expect('A man, a plan, a canal -- Panama').to be_a_palindrome
     expect("Madam, I'm Adam!").to be_a_palindrome
   end    
 end
 
-describe 'word count', :pending => true do
+describe '[2 points] word count', :pending => true do
   it 'should return a hash' do
     expect('now is the time'.count_words).to be_a_kind_of Hash
   end
@@ -36,7 +36,7 @@ describe 'word count', :pending => true do
   end
 end
 
-describe 'anagram grouping', :pending => true do
+describe '[2 points] anagram grouping', :pending => true do
   describe 'sanity checks' do
     it 'should work on the empty string' do
       expect(''.anagram_groups).to eq([])
@@ -52,5 +52,4 @@ describe 'anagram grouping', :pending => true do
         expect(@anagrams).to include(group)
     end
   end
-    
 end
